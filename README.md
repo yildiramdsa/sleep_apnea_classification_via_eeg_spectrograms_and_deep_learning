@@ -1,1 +1,1 @@
-# sleep_apnea_classification_via_eeg_spectrograms_and_deep_learning
+# Sleep Apnea Classification via EEG Spectrograms and Deep Learning
