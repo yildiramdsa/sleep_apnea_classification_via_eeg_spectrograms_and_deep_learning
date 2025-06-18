@@ -27,9 +27,6 @@
 | ResNet64  | 93.0    | Comparable accuracy; higher parameter count               |
 | YOLOv5    | 88.2    | Good detection but slower and more computationally heavy  |
 
-- **Key Finding:** YOLOv8 matches or exceeds ResNet64’s performance while reducing model size and inference time.  
-- **Novelty:** Parameter-reduction strategies in four-class EEG classification have been underexplored; this study demonstrates their viability.
-
 ## Conclusion
 
 This work introduces a lightweight, high-accuracy pipeline for multi-severity sleep apnea classification using EEG spectrograms, positioning YOLOv8 as a competitive new tool in this domain.
