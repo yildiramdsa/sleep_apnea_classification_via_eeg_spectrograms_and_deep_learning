@@ -2,34 +2,7 @@
 
 **Tech Stack:** ![ResNet50](https://img.shields.io/badge/ResNet50-EE4C2C?logo=pytorch&logoColor=white) ![YOLOv5](https://img.shields.io/badge/YOLOv5-FF9900?logo=pytorch&logoColor=white) ![YOLOv8](https://img.shields.io/badge/YOLOv8-0072C6?logo=pytorch&logoColor=white)
 
-## Methodology
-
-1. **Data Acquisition & Preprocessing**  
-   - EEG signals were extracted from polysomnography (PSG) recordings.  
-   - A 30-second sliding window was applied to segment the signals by apnea-hypopnea index (AHI) values.  
-   - Short-time Fourier transform (STFT) generated spectrograms for each segment, which serve as model inputs.
-
-2. **Model Architectures**  
-   - **YOLOv8**: Chosen for its balance of accuracy and speed, with reduced parameter count and fewer layers.  
-   - **ResNet64**: A standard convolutional baseline known for strong EEG-based classification performance.  
-   - **YOLOv5**: Included for comparison, demonstrating effective event detection but with higher computational cost.
-
-3. **Training & Evaluation**  
-   - Four-class classification labels: Healthy, Mild, Moderate, and Severe apnea.  
-   - Balanced-class reference level set at 25% per class, ensuring equal sample representation.  
-   - Metrics: Total correct classification (TCC) ratio across classes.
-
-## Experiments & Results
-
-| Model     | TCC (%) | Notes                                                     |
-|-----------|---------|-----------------------------------------------------------|
-| YOLOv8    | 93.7    | Highest accuracy; fastest inference; fewest parameters    |
-| ResNet64  | 93.0    | Comparable accuracy; higher parameter count               |
-| YOLOv5    | 88.2    | Good detection but slower and more computationally heavy  |
-
-## Conclusion
-
-This work introduces a lightweight, high-accuracy pipeline for multi-severity sleep apnea classification using EEG spectrograms, positioning YOLOv8 as a competitive new tool in this domain.
+An end-to-end pipeline for four-class sleep apnea severity classification using EEG spectrograms from PSG recordings. YOLOv8 delivers fast, high-accuracy detection across healthy, mild, moderate, and severe cases, while ResNet64 and YOLOv5 benchmarks underscore YOLOv8’s streamlined architecture and superior performance.
 
 ## References
 
